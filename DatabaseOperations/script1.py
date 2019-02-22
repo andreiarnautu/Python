@@ -9,8 +9,6 @@ def create_table():
 
     #  Create database if it does not exist.
     cursor.execute("CREATE TABLE IF NOT EXISTS store (item TEXT, quantity INTEGER, price REAL)")
-    #  Add data to the database.
-    cursor.execute("INSERT INTO store VALUES ('Wine Glass', 5, 10.5)")
     connection.commit()
     connection.close()
 
@@ -31,6 +29,8 @@ def view() :
     connection.close()
     return rows
 
-
-print(view())
+create_table()
+insert_element("Liverpool T-Shirt", 100, 20)
+insert_element("Arsenal T-Shirt", 40, 20)
+insert_element("Barcelona T-Shirt", 80, 20)
 print(view())
