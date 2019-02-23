@@ -11,4 +11,4 @@ if results:
     for result in results:
         print(result[1])
 else:
-    print("We couldn't find any results about that.")
+    print("We couldn't find any results about that."
